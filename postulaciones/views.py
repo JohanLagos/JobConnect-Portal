@@ -18,7 +18,7 @@ class PostulacionViewSet(viewsets.ModelViewSet):
     def perform_create(self, serializer):
         user = self.request.user
         if user.rol != 'candidato':
-            raise permissions.PermissionDenied("Solo los candidatos pueden postularse.")
+            raise permissions.PermissionDenied("Sólo los candidatos pueden postularse.")
         
         vacante_id = self.request.data.get('vacante')
         if Postulacion.objects.filter(candidato=user, vacante_id=vacante_id).exists():
