@@ -1,5 +1,5 @@
 import { createContext, useEffect, useState } from "react";
-import api from "../api/jobconnect.api";
+import api from "../api/jobconnect.api"
 
 export const AuthContext = createContext();
 
@@ -15,7 +15,7 @@ export function AuthProvider({ children }) {
             console.warn("No se pudo cargar el perfil del usuario (token expirado o inválido)");
             localStorage.removeItem("access");
             localStorage.removeItem("refresh");
-            setUsuario(null);
+        setUsuario(null);
         }finally {
             setLoading(false); // 👈 importante: termina carga
         }

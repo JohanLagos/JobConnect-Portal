@@ -157,7 +157,6 @@ def test_registro_username_duplicado_falla():
     assert "username" in serializer2.errors
 
 
-
 @pytest.mark.django_db
 def test_contraseña_demasiado_comun_falla():
     data = {

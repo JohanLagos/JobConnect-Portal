@@ -41,9 +41,9 @@ urlpatterns = [
     path('admin/', admin.site.urls),
 
     # Prefijos claros por aplicación
-    path('api/usuarios/', include('usuarios.urls')),
-    path('api/empleos/', include('empleos.urls')),
-    path('api/postulaciones/', include('postulaciones.urls')),
+    path('api/', include('usuarios.urls')),
+    path('api/', include('empleos.urls')),
+    path('api/', include('postulaciones.urls')),
 
     # Autenticación
     path('api/login/', TokenObtainPairView.as_view(), name='login'),
