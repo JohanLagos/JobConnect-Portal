@@ -25,7 +25,10 @@ SECRET_KEY = 'django-insecure-c4#_ypmzx#9&gqg=h6^9jo8g$x5qgfwpp+-6jw7gn*bqat-=hk
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'localhost',
+    "jobconnect-portal-production.up.railway.app"
+]
 
 
 # Application definition
